@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUXE ROUGE - Premium luxury makeup brand. Bold, glamorous, cruelty-free cosmetics for the modern woman. Shop lipstick, foundation, eyeshadow and more.">
+    <meta name="keywords" content="luxury makeup, neon red cosmetics, lipstick, foundation, eyeshadow, cruelty-free beauty">
+    <title>LUXE ROUGE | Luxury Makeup – Glow Like Never Before</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">💋</span>
+                <span class="logo-text">LUXE <span class="logo-accent">ROUGE</span></span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-cart" id="nav-cart" aria-label="Shopping cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-gradient-orb"></div>
+        <div class="hero-gradient-orb orb-2"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-tag">✨ NEW COLLECTION 2026</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Glow Like</span>
+                    <span class="title-line title-accent">Never Before</span>
+                </h1>
+                <p class="hero-subtitle">Luxury Makeup for Bold Beauty</p>
+                <p class="hero-desc">Discover our premium collection of cruelty-free cosmetics, crafted with passion and precision for the modern woman who dares to shine.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary" id="btn-shop-now">
+                        <span>Shop Now</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#products" class="btn btn-outline" id="btn-explore">
+                        <span>Explore Collection</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Avg Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-wrapper">
+                    <img src="images/hero.png" alt="Glamorous model with bold red makeup" loading="eager">
+                    <div class="hero-img-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED PRODUCTS ==================== -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">💄 Our Collection</p>
+                <h2 class="section-title">Featured <span class="text-accent">Products</span></h2>
+                <p class="section-desc">Handpicked essentials for your perfect look</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" id="product-1">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-img-wrapper">
+                        <img src="images/lipstick.png" alt="Velvet Matte Lipstick in bold red" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Lips</span>
+                        <h3 class="product-name">Velvet Matte Lipstick</h3>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background:#ff0033"></span>
+                            <span class="color-dot" style="background:#cc0028"></span>
+                            <span class="color-dot" style="background:#ff4466"></span>
+                            <span class="color-dot" style="background:#990022"></span>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-current">$24.99</span>
+                                <span class="price-old">$34.99</span>
+                            </div>
+                            <button class="btn-add-cart" aria-label="Add Velvet Matte Lipstick to cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" id="product-2">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-img-wrapper">
+                        <img src="images/foundation.png" alt="Silk Glow Foundation in glass bottle" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Face</span>
+                        <h3 class="product-name">Silk Glow Foundation</h3>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background:#f5d0a9"></span>
+                            <span class="color-dot" style="background:#d4a574"></span>
+                            <span class="color-dot" style="background:#c49a6c"></span>
+                            <span class="color-dot" style="background:#8b6d52"></span>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-current">$38.99</span>
+                            </div>
+                            <button class="btn-add-cart" aria-label="Add Silk Glow Foundation to cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" id="product-3">
+                    <div class="product-img-wrapper">
+                        <img src="images/eyeshadow.png" alt="Rouge Flame Eyeshadow Palette" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Eyes</span>
+                        <h3 class="product-name">Rouge Flame Palette</h3>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background:#ff0033"></span>
+                            <span class="color-dot" style="background:#ff6688"></span>
+                            <span class="color-dot" style="background:#cc8899"></span>
+                            <span class="color-dot" style="background:#442233"></span>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-current">$42.99</span>
+                                <span class="price-old">$56.99</span>
+                            </div>
+                            <button class="btn-add-cart" aria-label="Add Rouge Flame Palette to cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" id="product-4">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-img-wrapper">
+                        <img src="images/mascara.png" alt="Dramatic Lash Mascara in sleek tube" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Eyes</span>
+                        <h3 class="product-name">Dramatic Lash Mascara</h3>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background:#111"></span>
+                            <span class="color-dot" style="background:#1a1a2e"></span>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-current">$19.99</span>
+                            </div>
+                            <button class="btn-add-cart" aria-label="Add Dramatic Lash Mascara to cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-cta">
+                <a href="#" class="btn btn-outline" id="btn-view-all">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT BRAND ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <img src="images/about.png" alt="Luxe Rouge makeup product collection" loading="lazy">
+                        <div class="about-img-decoration"></div>
+                    </div>
+                    <div class="about-experience">
+                        <span class="exp-number">12+</span>
+                        <span class="exp-text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="section-tag">🌟 Our Story</p>
+                    <h2 class="section-title">Redefining <span class="text-accent">Beauty</span></h2>
+                    <p class="about-text">At <strong>LUXE ROUGE</strong>, we believe makeup is more than cosmetics – it's confidence, creativity, and self-expression. Founded with a vision to create premium-quality, cruelty-free products that empower every woman to embrace her bold, unapologetic beauty.</p>
+                    <p class="about-text">Our formulas are crafted with the finest ingredients, blending cutting-edge science with timeless elegance. Every product is a statement piece, designed to make you feel extraordinary.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">💎</div>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Only the finest ingredients sourced globally</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🌿</div>
+                            <div>
+                                <h4>100% Vegan</h4>
+                                <p>Cruelty-free and plant-based formulas</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">✨</div>
+                            <div>
+                                <h4>Long Lasting</h4>
+                                <p>24-hour wear that stays flawless</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary" id="btn-learn-more">
+                        <span>Learn More</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OFFERS / HIGHLIGHTS ==================== -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">🔥 Why Choose Us</p>
+                <h2 class="section-title">Our <span class="text-accent">Promise</span></h2>
+            </div>
+            <div class="offers-grid">
+                <div class="offer-card" id="offer-1">
+                    <div class="offer-icon-wrapper">
+                        <div class="offer-icon">🏷️</div>
+                    </div>
+                    <h3 class="offer-title">50% OFF</h3>
+                    <p class="offer-desc">On your first order! Use code <strong>GLOW50</strong> at checkout for luxury savings.</p>
+                    <div class="offer-glow"></div>
+                </div>
+                <div class="offer-card" id="offer-2">
+                    <div class="offer-icon-wrapper">
+                        <div class="offer-icon">🌿</div>
+                    </div>
+                    <h3 class="offer-title">100% Vegan</h3>
+                    <p class="offer-desc">All products are made with plant-based ingredients. Kind to your skin, kind to the planet.</p>
+                    <div class="offer-glow"></div>
+                </div>
+                <div class="offer-card" id="offer-3">
+                    <div class="offer-icon-wrapper">
+                        <div class="offer-icon">🐰</div>
+                    </div>
+                    <h3 class="offer-title">Cruelty-Free</h3>
+                    <p class="offer-desc">Leaping Bunny certified. Zero animal testing, ever. Beauty without guilt.</p>
+                    <div class="offer-glow"></div>
+                </div>
+                <div class="offer-card" id="offer-4">
+                    <div class="offer-icon-wrapper">
+                        <div class="offer-icon">🚚</div>
+                    </div>
+                    <h3 class="offer-title">Free Shipping</h3>
+                    <p class="offer-desc">Free express delivery on all orders over $50. Get your glam delivered fast.</p>
+                    <div class="offer-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOMER REVIEWS ==================== -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">💬 Testimonials</p>
+                <h2 class="section-title">What Our <span class="text-accent">Customers</span> Say</h2>
+                <p class="section-desc">Real reviews from real beauty lovers</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card" id="review-1">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The Velvet Matte Lipstick is absolutely incredible! The color payoff is unreal and it lasts ALL day without drying my lips. I've never felt more confident. This brand is a total game-changer!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sophia Martinez</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card featured-review" id="review-2">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"I switched to LUXE ROUGE six months ago and I'm never going back. The foundation blends like a dream, and knowing it's cruelty-free makes me love it even more. Premium quality at its finest!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Aisha Johnson</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card" id="review-3">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The Rouge Flame Palette has the most beautiful neon-inspired shades I've ever seen. The pigmentation is chef's kiss! Perfect for bold looks and everyday glam alike."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">E</div>
+                        <div class="author-info">
+                            <h4>Emma Chen</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Stay in the <span class="text-accent">Glow</span></h2>
+                    <p class="newsletter-desc">Subscribe for exclusive drops, beauty tips, and 15% off your next order.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Enter your email address" class="newsletter-input" id="newsletter-email" required aria-label="Email address for newsletter">
+                        <button type="submit" class="btn btn-primary newsletter-btn" id="btn-subscribe">
+                            <span>Subscribe</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+                    </div>
+                    <p class="newsletter-note">No spam, ever. Unsubscribe anytime. 💋</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">📞 Get in Touch</p>
+                <h2 class="section-title">Contact <span class="text-accent">Us</span></h2>
+                <p class="section-desc">We'd love to hear from you</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item" id="contact-email">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@luxerouge.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" id="contact-phone">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (800) 555-LUXE</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" id="contact-address">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Glamour Ave, New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-link" id="social-twitter" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" id="social-facebook" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" id="social-youtube" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" class="form-input" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" class="form-input" id="contact-email-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" class="form-input" id="contact-subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-input form-textarea" id="contact-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn-send-message">
+                        <span>Send Message</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">💋</span>
+                        <span class="logo-text">LUXE <span class="logo-accent">ROUGE</span></span>
+                    </a>
+                    <p class="footer-desc">Luxury makeup for bold beauty. Cruelty-free, vegan, and crafted with love for the modern woman.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Lipstick</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Eyeshadow</a></li>
+                        <li><a href="#">Mascara</a></li>
+                        <li><a href="#">Skincare</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE ROUGE. All rights reserved. Made with 💋 & ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal JS for interactivity -->
+    <script>
+        // Sticky navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile hamburger
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
+            document.getElementById('hamburger').classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-links').classList.remove('active');
+                document.getElementById('hamburger').classList.remove('active');
+            });
+        });
+
+        // Scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card, .offer-card, .review-card, .about-content, .about-image, .contact-info, .contact-form').forEach(el => {
+            el.classList.add('animate-target');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

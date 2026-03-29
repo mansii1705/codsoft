@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mansi Malekar — Aspiring Web Developer & Creative Designer. Portfolio showcasing projects, skills, and creative work.">
+  <title>Mansi Malekar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER / HERO ===== -->
+  <header class="header" id="header">
+    <div class="header__paper">
+      <div class="header__tape header__tape--left"></div>
+      <div class="header__tape header__tape--right"></div>
+
+      <h1 class="header__name">Mansi Malekar</h1>
+      <p class="header__tagline">Aspiring Web Developer &nbsp;|&nbsp; Creative Designer</p>
+
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav__tab">About</a>
+        <a href="#skills" class="nav__tab">Skills</a>
+        <a href="#projects" class="nav__tab">Projects</a>
+        <a href="#resume" class="nav__tab">Resume</a>
+        <a href="#contact" class="nav__tab">Contact</a>
+      </nav>
+    </div>
+    <!-- decorative doodle elements -->
+    <div class="doodle doodle--star" aria-hidden="true">&#10038;</div>
+    <div class="doodle doodle--circle" aria-hidden="true"></div>
+    <div class="doodle doodle--arrow" aria-hidden="true">&#10140;</div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="section__label">About Me</div>
+
+    <div class="about__grid">
+      <div class="about__photo-wrapper">
+        <div class="about__photo-tape"></div>
+        <img src="profile.png" alt="Mansi Malekar" class="about__photo" width="280" height="280">
+      </div>
+
+      <div class="about__bio-card">
+        <div class="about__bio-clip" aria-hidden="true"></div>
+        <p class="about__bio-text">
+          I am a passionate web developer skilled in HTML and CSS, focused on building creative and responsive websites. I love turning ideas into pixel-perfect, visually rich experiences that feel alive.
+        </p>
+        <div class="about__highlight" aria-hidden="true">
+          <span>Creative</span>
+          <span>Curious</span>
+          <span>Driven</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="doodle doodle--squiggle" aria-hidden="true">〰️</div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="section__label section__label--rotated">My Skills</div>
+
+    <div class="skills__board">
+      <div class="sticky sticky--yellow" style="--r:-2deg">
+        <span class="sticky__pin" aria-hidden="true"></span>
+        <span class="sticky__text">HTML</span>
+      </div>
+      <div class="sticky sticky--blue" style="--r:1.5deg">
+        <span class="sticky__pin" aria-hidden="true"></span>
+        <span class="sticky__text">CSS</span>
+      </div>
+      <div class="sticky sticky--pink" style="--r:-1deg">
+        <span class="sticky__pin" aria-hidden="true"></span>
+        <span class="sticky__text">C++</span>
+      </div>
+      <div class="sticky sticky--green" style="--r:2.5deg">
+        <span class="sticky__pin" aria-hidden="true"></span>
+        <span class="sticky__text">Data Structures</span>
+      </div>
+      <div class="sticky sticky--orange" style="--r:-1.8deg">
+        <span class="sticky__pin" aria-hidden="true"></span>
+        <span class="sticky__text">Problem Solving</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="section__label">Projects</div>
+
+    <div class="projects__grid">
+      <!-- project 1 -->
+      <article class="project-card" style="--r:1.4deg">
+        <div class="project-card__clip" aria-hidden="true"></div>
+        <div class="project-card__img-wrapper">
+          <img src="flower-store.png" alt="Flower Store Website" class="project-card__img" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Flower Store Website</h3>
+          <p class="project-card__desc">A vibrant online flower shop with a beautiful gallery, smooth layout, and cart functionality — built with pure HTML &amp; CSS.</p>
+        </div>
+      </article>
+
+      <!-- project 2 -->
+      <article class="project-card" style="--r:-1.8deg">
+        <div class="project-card__clip" aria-hidden="true"></div>
+        <div class="project-card__img-wrapper">
+          <img src="calculator-app.png" alt="Calculator UI App" class="project-card__img" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Calculator UI App</h3>
+          <p class="project-card__desc">A sleek, modern calculator interface featuring a dark theme, rounded buttons, and clean number display.</p>
+        </div>
+      </article>
+
+      <!-- project 3 -->
+      <article class="project-card" style="--r:0.9deg">
+        <div class="project-card__clip" aria-hidden="true"></div>
+        <div class="project-card__img-wrapper">
+          <img src="login-system.png" alt="Login System UI" class="project-card__img" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Login System UI</h3>
+          <p class="project-card__desc">A clean, minimal login &amp; signup interface with gentle gradients and smooth form interactions.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section class="section resume" id="resume">
+    <div class="section__label section__label--rotated">Resume</div>
+
+    <div class="resume__inner">
+      <p class="resume__text">Want to know more about my experience &amp; education?</p>
+      <a href="#" class="resume__btn" aria-label="Download Resume">
+        <span class="resume__btn-stamp">&#9745;</span>
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="section__label">Get in Touch</div>
+
+    <div class="contact__grid">
+      <div class="contact__info-card">
+        <div class="contact__tape" aria-hidden="true"></div>
+        <h3 class="contact__info-title">Contact Info</h3>
+        <p class="contact__info-item">
+          <span class="contact__icon">&#9993;</span>
+          your-email@example.com
+        </p>
+        <p class="contact__info-item">
+          <span class="contact__icon">&#9742;</span>
+          1234567890
+        </p>
+      </div>
+
+      <form class="contact__form" action="#" method="post">
+        <div class="contact__form-tape" aria-hidden="true"></div>
+        <h3 class="contact__form-title">Send a Message</h3>
+
+        <div class="contact__field">
+          <label for="c-name" class="contact__label">Name</label>
+          <input type="text" id="c-name" name="name" class="contact__input" placeholder="Your name" required>
+        </div>
+
+        <div class="contact__field">
+          <label for="c-email" class="contact__label">Email</label>
+          <input type="email" id="c-email" name="email" class="contact__input" placeholder="you@email.com" required>
+        </div>
+
+        <div class="contact__field">
+          <label for="c-message" class="contact__label">Message</label>
+          <textarea id="c-message" name="message" class="contact__input contact__textarea" rows="4" placeholder="Write your message…" required></textarea>
+        </div>
+
+        <button type="submit" class="contact__submit">Send &#9993;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__line" aria-hidden="true"></div>
+    <p class="footer__text">&copy; 2026 Mansi Malekar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,641 @@
+/* ============================================================
+   MANSI MALEKAR — SCANNED NOTEBOOK / COLLAGE PORTFOLIO
+   Pure HTML + CSS  •  No JavaScript
+   ============================================================ */
+
+/* ---------- reset & variables ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* paper palette */
+  --paper:        #f5f0e8;
+  --paper-warm:   #faf4eb;
+  --paper-cool:   #eef1f5;
+  --paper-aged:   #ede5d5;
+  --ink:          #2c2420;
+  --ink-light:    #6b5e54;
+  --accent:       #c0392b;
+  --accent-alt:   #2471a3;
+
+  /* sticky-note colours */
+  --yellow:       #fff9c4;
+  --blue:         #bbdefb;
+  --pink:         #f8bbd0;
+  --green:        #c8e6c9;
+  --orange:       #ffe0b2;
+
+  /* shadows */
+  --shadow-paper: 2px 3px 8px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08);
+  --shadow-lift:  4px 6px 18px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.10);
+
+  /* fonts */
+  --font-serif:   'Lora', 'Georgia', serif;
+  --font-sans:    'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-hand:    'Caveat', cursive;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  line-height: 1.65;
+  /* paper background with subtle texture */
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(180,170,155,.10) 27px,
+      rgba(180,170,155,.10) 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 27px,
+      rgba(180,170,155,.06) 27px,
+      rgba(180,170,155,.06) 28px
+    );
+}
+
+img { max-width: 100%; display: block; }
+a   { color: inherit; text-decoration: none; }
+
+/* ---------- reusable section wrapper ---------- */
+.section {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 30px 50px;
+}
+
+.section__label {
+  display: inline-block;
+  font-family: var(--font-hand);
+  font-size: 2rem;
+  color: var(--accent);
+  padding: 6px 22px;
+  border: 2px solid var(--accent);
+  background: var(--paper-warm);
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-1.2deg);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+.section__label--rotated { transform: rotate(1.5deg); }
+
+/* ============================================================
+   HEADER  —  printed title on pasted paper
+   ============================================================ */
+.header {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px 30px;
+  overflow: hidden;
+}
+
+.header__paper {
+  position: relative;
+  display: inline-block;
+  background: var(--paper-warm);
+  border: 1.5px solid #c8bfae;
+  padding: 50px 60px 30px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-0.5deg);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* washi-tape strips */
+.header__tape {
+  position: absolute;
+  width: 90px;
+  height: 26px;
+  opacity: .55;
+  border-radius: 2px;
+}
+.header__tape--left {
+  top: -10px; left: 30px;
+  background: repeating-linear-gradient(45deg, #f7c873 0 6px, #f5d99a 6px 12px);
+  transform: rotate(-8deg);
+}
+.header__tape--right {
+  top: -10px; right: 30px;
+  background: repeating-linear-gradient(45deg, #a3d9a5 0 6px, #c8ecc9 6px 12px);
+  transform: rotate(6deg);
+}
+
+.header__name {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.6);
+}
+
+.header__tagline {
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  color: var(--ink-light);
+  margin-bottom: 30px;
+}
+
+/* nav tabs */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav__tab {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: .92rem;
+  padding: 7px 18px;
+  border: 1.5px solid #bbb3a3;
+  background: var(--paper);
+  box-shadow: 1px 2px 4px rgba(0,0,0,.08);
+  border-radius: 3px 3px 0 0;
+  transition: transform .25s, box-shadow .25s, background .25s;
+  position: relative;
+  top: 0;
+}
+.nav__tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 4px 10px rgba(0,0,0,.14);
+  background: #fff;
+}
+
+/* decorative doodles */
+.doodle { position: absolute; pointer-events: none; opacity: .18; user-select: none; }
+.doodle--star   { font-size: 2.6rem; top: 30px; right: 8%; color: var(--accent); transform: rotate(15deg); }
+.doodle--circle {
+  width: 60px; height: 60px; border: 3px dashed var(--accent-alt);
+  border-radius: 50%; bottom: 20px; left: 6%;
+}
+.doodle--arrow  { font-size: 2rem; bottom: 50px; right: 12%; color: var(--ink-light); transform: rotate(-20deg); }
+.doodle--squiggle { font-size: 2rem; bottom: 10px; right: 5%; }
+
+/* ============================================================
+   ABOUT  —  pasted photo + bio cut-out
+   ============================================================ */
+.about__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__photo-wrapper {
+  position: relative;
+  width: 260px;
+  flex-shrink: 0;
+  transform: rotate(-2.5deg);
+}
+.about__photo-tape {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+  width: 80px; height: 22px;
+  background: repeating-linear-gradient(45deg, #f7c873 0 6px, #f5d99a 6px 12px);
+  opacity: .6;
+  border-radius: 2px;
+  z-index: 2;
+}
+.about__photo {
+  width: 100%;
+  height: auto;
+  border: 6px solid #fff;
+  box-shadow: var(--shadow-lift);
+  object-fit: cover;
+}
+
+.about__bio-card {
+  position: relative;
+  max-width: 480px;
+  background: var(--paper-cool);
+  border: 1.5px solid #c4cdd6;
+  padding: 36px 32px 28px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(0.8deg);
+}
+
+/* paper clip */
+.about__bio-clip {
+  position: absolute;
+  top: -14px; left: 24px;
+  width: 24px; height: 44px;
+  border: 3px solid #999;
+  border-radius: 4px 4px 12px 12px;
+  background: transparent;
+  transform: rotate(-8deg);
+}
+.about__bio-clip::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 3px;
+  width: 12px; height: 22px;
+  border: 3px solid #999;
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+}
+
+.about__bio-text {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.about__highlight {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.about__highlight span {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  color: var(--accent);
+  padding: 2px 14px;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ============================================================
+   SKILLS  —  sticky notes on a board
+   ============================================================ */
+.skills__board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.sticky {
+  position: relative;
+  width: 170px;
+  min-height: 140px;
+  padding: 38px 18px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: var(--shadow-paper);
+  transform: rotate(var(--r, 0deg));
+  transition: transform .3s, box-shadow .3s;
+  cursor: default;
+}
+.sticky:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.04);
+  box-shadow: var(--shadow-lift);
+  z-index: 5;
+}
+
+.sticky--yellow { background: var(--yellow); }
+.sticky--blue   { background: var(--blue);   }
+.sticky--pink   { background: var(--pink);   }
+.sticky--green  { background: var(--green);  }
+.sticky--orange { background: var(--orange); }
+
+/* push-pin */
+.sticky__pin {
+  position: absolute;
+  top: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 14px; height: 14px;
+  background: radial-gradient(circle at 40% 35%, #e74c3c 0%, #922b21 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+.sticky__text {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ink);
+}
+
+/* ============================================================
+   PROJECTS  —  clipped paper cards
+   ============================================================ */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 10px 0;
+}
+
+.project-card {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #d5cec3;
+  padding: 0;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(var(--r, 0deg));
+  transition: transform .35s, box-shadow .35s;
+  overflow: hidden;
+}
+.project-card:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: var(--shadow-lift);
+  z-index: 4;
+}
+
+/* binder-clip */
+.project-card__clip {
+  position: absolute;
+  top: -6px; left: 50%;
+  transform: translateX(-50%);
+  width: 44px; height: 18px;
+  background: #444;
+  border-radius: 4px 4px 0 0;
+  z-index: 3;
+}
+.project-card__clip::before,
+.project-card__clip::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  width: 12px; height: 18px;
+  border: 3px solid #555;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+.project-card__clip::before { left: 5px; }
+.project-card__clip::after  { right: 5px; }
+
+.project-card__img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1.5px dashed #ccc;
+}
+.project-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.project-card:hover .project-card__img {
+  transform: scale(1.05);
+}
+
+.project-card__body { padding: 22px 20px 26px; }
+
+.project-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.project-card__desc {
+  font-size: .95rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RESUME  —  stamp-style button
+   ============================================================ */
+.resume__inner {
+  background: var(--paper-warm);
+  border: 2px dashed #c8bfae;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(0.6deg);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.resume__text {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.resume__btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  border: 3px solid var(--accent);
+  padding: 14px 36px;
+  border-radius: 4px;
+  position: relative;
+  transition: background .3s, color .3s, transform .3s, box-shadow .3s;
+}
+.resume__btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.resume__btn-stamp {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   CONTACT  —  form on printed paper
+   ============================================================ */
+.contact__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* info card */
+.contact__info-card {
+  position: relative;
+  background: var(--paper-warm);
+  border: 1.5px solid #c8bfae;
+  padding: 40px 30px 30px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-1.2deg);
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.contact__tape {
+  position: absolute;
+  top: -10px; right: 20px;
+  width: 70px; height: 22px;
+  background: repeating-linear-gradient(45deg, #a3d9a5 0 6px, #c8ecc9 6px 12px);
+  opacity: .55;
+  border-radius: 2px;
+  transform: rotate(5deg);
+}
+
+.contact__info-title {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.contact__info-item {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.contact__icon {
+  margin-right: 8px;
+  font-size: 1.15rem;
+}
+
+/* form */
+.contact__form {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #d5cec3;
+  padding: 40px 30px 30px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(0.8deg);
+  flex: 1;
+  max-width: 480px;
+  min-width: 300px;
+}
+
+.contact__form-tape {
+  position: absolute;
+  top: -10px; left: 24px;
+  width: 70px; height: 22px;
+  background: repeating-linear-gradient(45deg, #f7c873 0 6px, #f5d99a 6px 12px);
+  opacity: .55;
+  border-radius: 2px;
+  transform: rotate(-4deg);
+}
+
+.contact__form-title {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+.contact__field { margin-bottom: 22px; }
+
+.contact__label {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-light);
+  margin-bottom: 6px;
+}
+
+.contact__input {
+  width: 100%;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #bbb3a3;
+  padding: 8px 4px;
+  outline: none;
+  transition: border-color .3s;
+}
+.contact__input:focus {
+  border-color: var(--accent);
+}
+
+.contact__textarea {
+  resize: vertical;
+  border: 1.5px solid #bbb3a3;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+.contact__submit {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: .95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 12px 32px;
+  border: 2.5px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background .3s, color .3s, transform .25s, box-shadow .3s;
+}
+.contact__submit:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* ============================================================
+   FOOTER  —  printed footer
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 30px 20px 36px;
+  margin-top: 20px;
+}
+
+.footer__line {
+  max-width: 600px;
+  height: 1.5px;
+  background: repeating-linear-gradient(90deg, #bbb3a3 0 8px, transparent 8px 14px);
+  margin: 0 auto 18px;
+}
+
+.footer__text {
+  font-family: var(--font-serif);
+  font-size: .92rem;
+  color: var(--ink-light);
+  letter-spacing: .5px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .header__paper { padding: 40px 24px 24px; }
+  .header__name  { font-size: 2rem; }
+
+  .about__grid    { flex-direction: column; }
+  .about__photo-wrapper { width: 200px; }
+
+  .projects__grid { grid-template-columns: 1fr; gap: 30px; }
+
+  .contact__grid  { flex-direction: column; align-items: center; }
+  .contact__info-card { width: 100%; max-width: 400px; }
+  .contact__form  { max-width: 100%; }
+
+  .sticky { width: 140px; min-height: 115px; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 50px 16px 30px; }
+  .nav__tab { padding: 6px 12px; font-size: .82rem; }
+  .header__paper { padding: 30px 16px 20px; }
+  .resume__inner { padding: 30px 20px; }
+}
